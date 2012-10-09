@@ -144,7 +144,6 @@ You can create an Imageset object to specify a series of still images as a sourc
 imageset = FFMPEG::Imageset.new("images/image%d.jpg")
 ```
 
-The screenshot method has the very same API as transcode so the same options will work.
 Then, to create the output movie, call the transcode method and specify the framerate and bitrate using the "-r" and "-b" options.
 
 ``` ruby
