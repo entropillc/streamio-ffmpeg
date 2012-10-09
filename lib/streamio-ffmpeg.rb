@@ -6,8 +6,10 @@ require 'stringio'
 require 'ffmpeg/version'
 require 'ffmpeg/errors'
 require 'ffmpeg/movie'
+require 'ffmpeg/imageset'
 require 'ffmpeg/io_monkey'
 require 'ffmpeg/transcoder'
+require 'ffmpeg/imageset_transcoder'
 require 'ffmpeg/encoding_options'
 
 module FFMPEG
