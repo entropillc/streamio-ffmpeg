@@ -136,6 +136,21 @@ You can preserve aspect ratio the same way as when using transcode.
 movie.screenshot("screenshot.png", {:seek_time => 2, :resolution => '200x120'}, :preserve_aspect_ratio => :width)
 ```
 
+### Creating Movies From Still Images
+
+You can create an Imageset object to specify a series of still images as a source movie.
+
+``` ruby
+imageset = FFMPEG::Imageset.new("images/image%d.jpg")
+```
+
+The screenshot method has the very same API as transcode so the same options will work.
+Then, to create the output movie, call the transcode method and specify the framerate and bitrate using the "-r" and "-b" options.
+
+``` ruby
+imageset.transcode("output.mp4", "-r 10 -b 1800")
+```
+
 Specify the path to ffmpeg
 --------------------------
 
